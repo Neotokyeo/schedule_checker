@@ -17,12 +17,14 @@ root.withdraw
 file_path = filedialog.askopenfilename()
 print (file_path)
 
-print ("Here is your file path!", (file_path))
+print ("Here is your file path: ", (file_path))
 
 df1 = pd.read_csv(file_path)
 
 file_path2 = filedialog.askopenfilename()
 print (file_path2)
+
+print ("Here is your file path: ", (file_path2))
 
 df2 = pd.read_csv(file_path2)
 
@@ -32,9 +34,10 @@ def compare(df1, df2):
     differences = []
     
     
-    with open(df1, 'r') as csv_df1, open (df2, 'r') as csv_df2
+    with open(df1, 'r') as csv_df1, open (df2, 'r') as csv_df2:
         reader1 = csv.reader(csv_df1)
-        reader2 = csv
+        reader2 = csv.reader(csv_df2)
+        
     
 
 
